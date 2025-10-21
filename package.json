@@ -1,6 +1,6 @@
 {
-  "name": "@eng-mmustafa/nestjs-multi-channel-notifications",
-  "version": "1.0.0",
+  "name": "nestjs-multi-channel-notifications",
+  "version": "1.1.0",
   "description": "A comprehensive NestJS package that enables you to send notifications across multiple channels from a single, unified interface. Send emails, SMS, WhatsApp, Slack, Discord, Teams, Telegram, and Messenger notifications with ease.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -13,10 +13,20 @@
   "scripts": {
     "build": "tsc",
     "prepublishOnly": "npm run build",
+    "prepack": "npm run build",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "publish:npm": "npm run build && npm publish",
+    "version:patch": "npm version patch",
+    "version:minor": "npm version minor",
+    "version:major": "npm version major"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0",
+    "yarn": ">=1.22.0"
   },
   "keywords": [
     "nestjs",

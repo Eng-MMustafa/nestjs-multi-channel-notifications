@@ -1,7 +1,7 @@
 # 🚀 NestJS Multi-Channel Notifications
 
-[![npm version](https://badge.fury.io/js/%40eng-mmustafa%2Fnestjs-multi-channel-notifications.svg)](https://www.npmjs.com/package/@eng-mmustafa/nestjs-multi-channel-notifications)
-[![npm downloads](https://img.shields.io/npm/dm/@eng-mmustafa/nestjs-multi-channel-notifications.svg)](https://www.npmjs.com/package/@eng-mmustafa/nestjs-multi-channel-notifications)
+[![npm version](https://badge.fury.io/js/nestjs-multi-channel-notifications.svg)](https://www.npmjs.com/package/nestjs-multi-channel-notifications)
+[![npm downloads](https://img.shields.io/npm/dm/nestjs-multi-channel-notifications.svg)](https://www.npmjs.com/package/nestjs-multi-channel-notifications)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![GitHub stars](https://img.shields.io/github/stars/Eng-MMustafa/nestjs-multi-channel-notifications.svg)](https://github.com/Eng-MMustafa/nestjs-multi-channel-notifications)
 
@@ -21,14 +21,26 @@ A comprehensive NestJS package that enables you to send notifications across mul
 
 ## 📦 Installation
 
+### Using npm:
 ```bash
-npm install @eng-mmustafa/nestjs-multi-channel-notifications
+npm install nestjs-multi-channel-notifications
 ```
 
-Install peer dependencies:
+### Using yarn:
+```bash
+yarn add nestjs-multi-channel-notifications
+```
 
+### Install peer dependencies:
+
+**Using npm:**
 ```bash
 npm install @nestjs/common @nestjs/core reflect-metadata rxjs
+```
+
+**Using yarn:**
+```bash
+yarn add @nestjs/common @nestjs/core reflect-metadata rxjs
 ```
 
 ## ⚙️ Configuration
@@ -39,7 +51,7 @@ Import the module in your `app.module.ts`:
 
 ```typescript
 import { Module } from '@nestjs/common';
-import { NotificationModule } from '@eng-mmustafa/nestjs-multi-channel-notifications';
+import { NotificationModule } from 'nestjs-multi-channel-notifications';
 
 @Module({
   imports: [
@@ -159,7 +171,7 @@ export class AppModule {}
 
 ```typescript
 import { Injectable } from '@nestjs/common';
-import { NotificationService, NotificationMessage } from '@eng-mmustafa/nestjs-multi-channel-notifications';
+import { NotificationService, NotificationMessage } from 'nestjs-multi-channel-notifications';
 
 @Injectable()
 export class UserService {
@@ -191,7 +203,7 @@ export class UserService {
 ### 📧 Email Examples
 
 ```typescript
-import { NotificationService, NotificationMessage } from '@eng-mmustafa/nestjs-multi-channel-notifications';
+import { NotificationService, NotificationMessage } from 'nestjs-multi-channel-notifications';
 
 // Basic email
 const message = NotificationMessage.create(
